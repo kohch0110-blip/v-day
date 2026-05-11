@@ -254,7 +254,7 @@ h1 {
 
 /* Near the central GIF (Middle) */
 .pic6 { top: 50%; right: 15%; transform: rotate(15deg); } /* Middle-right, slightly lower */
-.pic7 { bottom: 10%; left: 45%; transform: rotate(2deg); } /* Bottom-middle, pulling it slightly away from the center */
+
 
 /* Responsive adjustment for Mobile (optional) */
 @media (max-width: 768px) {
