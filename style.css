@@ -226,7 +226,7 @@ h1 {
 /* --- Base style for all gallery photos (resizing and borders) --- */
 .gal-pic {
     position: absolute;
-    width: 120px; /* Small enough so 7 don't look crowded */
+    width: 180px; /* Small enough so 7 don't look crowded */
     height: auto;
     border: 6px solid white;
     border-radius: 10px;
@@ -246,7 +246,7 @@ h1 {
 /* TOP HALF */
 .pic1 { top: 15%; left: 10%; transform: rotate(-10deg); } /* Top-left */
 .pic2 { top: 20%; right: 10%; transform: rotate(12deg); } /* Top-right */
-.pic3 { top: 40%; left: 5%; transform: rotate(5deg); }  /* Middle-left */
+.pic3 { top: 50%; left: 5%; transform: rotate(-10deg); }  /* Middle-left */
 
 /* BOTTOM HALF */
 .pic4 { bottom: 20%; right: 5%; transform: rotate(-8deg); } /* Bottom-right */
