@@ -1,12 +1,12 @@
 const gifStages = [
-    "https://media.tenor.com/EBV7OT7ACfwAAAAj/u-u-qua-qua-u-quaa.gif",    // 0 normal
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAd/chiikawa-hachiware.gif",  // 1 confused
-    "https://media.tenor.com/f_rkpJbH1s8AAAAj/somsom1012.gif",             // 2 pleading
-    "https://media.tenor.com/OGY9zdREsVAAAAAj/somsom1012.gif",             // 3 sad
-    "https://media1.tenor.com/m/WGfra-Y_Ke0AAAAd/chiikawa-sad.gif",       // 4 sadder
-    "https://media.tenor.com/CivArbX7NzQAAAAj/somsom1012.gif",             // 5 devastated
-    "https://media.tenor.com/5_tv1HquZlcAAAAj/chiikawa.gif",               // 6 very devastated
-    "https://media1.tenor.com/m/uDugCXK4vI4AAAAC/chiikawa-hachiware.gif"  // 7 crying runaway
+    "https://tenor.com/view/ana-princess-frozen-disney-princess-disney-excited-gif-15496357",    // 0 normal
+    "https://tenor.com/view/disney-princess-jasmine-aladdin-sad-gif-16982856564758729798",  // 1 confused
+    "https://tenor.com/view/frozen-elsa-worried-anxious-nervous-gif-4626443",             // 2 pleading
+    "https://tenor.com/view/disney-belle-crying-sad-tears-gif-18792037",             // 3 sad
+    "https://tenor.com/view/facepalm-ariel-the-little-mermaid-disney-gif-12082912",       // 4 sadder
+    "https://tenor.com/view/rogar-llorar-please-princess-disney-gif-8643834",             // 5 devastated
+    "https://tenor.com/view/cinderella-sad-sorrow-sorrowful-emotional-gif-7571188131695227794",               // 6 very devastated
+    "https://tenor.com/view/disney-belle-crying-sad-tears-gif-18792037"  // 7 crying runaway
 ]
 
 const noMessages = [
