@@ -226,7 +226,7 @@ h1 {
 /* --- Base style for all gallery photos (resizing and borders) --- */
 .gal-pic {
     position: absolute;
-    width: 180px; /* Small enough so 7 don't look crowded */
+    width: 200px; /* Small enough so 7 don't look crowded */
     height: auto;
     border: 6px solid white;
     border-radius: 10px;
