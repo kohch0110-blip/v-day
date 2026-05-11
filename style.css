@@ -241,24 +241,29 @@ h1 {
     z-index: 20; /* Ensures it pops to the very front on hover */
 }
 
-/* --- INDIVIDUAL PLACEMENTS (Adjust these to taste!) --- */
+/* --- BALANCED 6-PHOTO LAYOUT --- */
 
-/* TOP HALF */
-.pic1 { top: 15%; left: 10%; transform: rotate(-10deg); } /* Top-left */
-.pic2 { top: 20%; right: 10%; transform: rotate(12deg); } /* Top-right */
-.pic3 { top: 50%; left: 15%; transform: rotate(-10deg); }  /* Middle-left */
+/* LEFT SIDE */
+.pic1 { top: 10%; left: 5%; transform: rotate(-10deg); }   /* Top Left */
+.pic3 { top: 45%; left: 3%; transform: rotate(5deg); }    /* Middle Left */
+.pic5 { bottom: 10%; left: 5%; transform: rotate(-12deg); } /* Bottom Left */
 
-/* BOTTOM HALF */
-.pic4 { bottom: 20%; right: 5%; transform: rotate(-8deg); } /* Bottom-right */
-.pic5 { bottom: 15%; left: 8%; transform: rotate(-15deg); } /* Bottom-left */
-
-/* Near the central GIF (Middle) */
-.pic6 { top: 50%; right: 15%; transform: rotate(15deg); } /* Middle-right, slightly lower */
-
+/* RIGHT SIDE */
+.pic2 { top: 12%; right: 5%; transform: rotate(10deg); }   /* Top Right */
+.pic6 { top: 50%; right: 3%; transform: rotate(15deg); }   /* Middle Right */
+.pic4 { bottom: 15%; right: 8%; transform: rotate(-8deg); } /* Bottom Right */
 
 /* Responsive adjustment for Mobile (optional) */
 @media (max-width: 768px) {
     .gal-pic {
         width: 90px;
     }
+}
+
+.yes-message {
+    font-size: 1.6rem;
+    color: #e91e8c;
+    font-weight: 700;
+    margin-top: 40px; /* This pushes the text further down from the GIF */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
 }
