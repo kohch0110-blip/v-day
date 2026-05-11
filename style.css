@@ -216,39 +216,41 @@ h1 {
 /* Base style for all gallery photos */
 .gal-pic {
     position: absolute;
-    width: 140px; /* Adjust size as needed */
+    /* CHANGE THIS VALUE: smaller number = smaller photo */
+    width: 110px; 
     height: auto;
-    border: 6px solid white;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    
+    /* This ensures they don't take up too much space on large screens */
+    max-width: 15vw; 
+    
+    border: 4px solid white; /* Thinner border looks better on smaller pics */
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     transition: transform 0.3s ease, z-index 0.3s;
     z-index: 1;
 }
 
+/* Make them pop a bit more when she hovers since they are smaller now */
 .gal-pic:hover {
-    transform: scale(1.2) rotate(0deg) !important;
+    transform: scale(1.5) rotate(0deg) !important; 
     z-index: 10;
-    cursor: pointer;
 }
 
 /* Individual Placements (Scattered around the center) */
-.pic1 { top: 0%; left: 5%; transform: rotate(-10deg); }
+.pic1 { top: 0%; left: 15%; transform: rotate(-10deg); }
 .pic2 { top: 10%; right: 5%; transform: rotate(12deg); }
-.pic3 { bottom: 5%; left: 8%; transform: rotate(5deg); }
-.pic4 { bottom: 10%; right: 10%; transform: rotate(-8deg); }
-.pic5 { top: 40%; left: -2%; transform: rotate(-15deg); } /* Floating on the left */
-.pic6 { top: 45%; right: -2%; transform: rotate(15deg); }  /* Floating on the right */
+.pic3 { bottom: 5%; left: 18%; transform: rotate(5deg); }
+.pic4 { bottom: 10%; right: 20%; transform: rotate(-8deg); }
+.pic5 { top: 40%; left: -12%; transform: rotate(-15deg); } /* Floating on the left */
+.pic6 { top: 45%; right: -12%; transform: rotate(15deg); }  /* Floating on the right */
 .pic7 { bottom: -15%; left: 40%; transform: rotate(2deg); } /* Bottom center */
 
 /* Responsive adjustment for Mobile */
 @media (max-width: 768px) {
     .gal-pic {
-        width: 100px; /* Smaller photos on phone */
+        width: 80px; /* Even smaller for phones */
     }
     .scattered-gallery {
-        height: 600px; /* More vertical space for phone */
+        height: 500px; /* Adjust height so they don't overlap too much vertically */
     }
-    /* Reposition for a narrower screen */
-    .pic5 { left: 5%; top: 60%; }
-    .pic6 { right: 5%; top: 70%; }
 }
