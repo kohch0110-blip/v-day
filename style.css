@@ -205,52 +205,60 @@ h1 {
     height: 260px;
 }
 
-/* Container for the scattered images */
-.scattered-gallery {
-    position: relative;
-    width: 100%;
-    height: 400px; /* Adjust height based on how much space you want */
-    margin: 20px 0;
+/* Container for the free-floating images */
+.main-scatter-wrapper {
+    position: fixed; /* Fixes them to the viewport, they stay put while text scrolls */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Crucial: Allows her to click on the text/toggle if needed */
+    z-index: 1; /* Sets the base level for the photos */
 }
 
-/* Base style for all gallery photos */
+/* Ensure the central text/GIF is always on TOP */
+.container {
+    position: relative;
+    z-index: 5; /* This pushes the central part above the photos */
+    /* ... existing center code ... */
+}
+
+/* --- Base style for all gallery photos (resizing and borders) --- */
 .gal-pic {
     position: absolute;
-    /* CHANGE THIS VALUE: smaller number = smaller photo */
-    width: 110px; 
+    width: 120px; /* Small enough so 7 don't look crowded */
     height: auto;
-    
-    /* This ensures they don't take up too much space on large screens */
-    max-width: 15vw; 
-    
-    border: 4px solid white; /* Thinner border looks better on smaller pics */
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease, z-index 0.3s;
-    z-index: 1;
+    border: 6px solid white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    pointer-events: auto; /* Allows clicking/hovering on the individual photo */
 }
 
-/* Make them pop a bit more when she hovers since they are smaller now */
+/* The hover effect to straighten and magnify */
 .gal-pic:hover {
-    transform: scale(1.5) rotate(0deg) !important; 
-    z-index: 10;
+    transform: scale(1.4) rotate(0deg) !important;
+    z-index: 20; /* Ensures it pops to the very front on hover */
 }
 
-/* Individual Placements (Scattered around the center) */
-.pic1 { top: 0%; left: 15%; transform: rotate(-10deg); }
-.pic2 { top: 10%; right: 5%; transform: rotate(12deg); }
-.pic3 { bottom: 5%; left: 18%; transform: rotate(5deg); }
-.pic4 { bottom: 10%; right: 20%; transform: rotate(-8deg); }
-.pic5 { top: 40%; left: -12%; transform: rotate(-15deg); } /* Floating on the left */
-.pic6 { top: 45%; right: -12%; transform: rotate(15deg); }  /* Floating on the right */
-.pic7 { bottom: -15%; left: 40%; transform: rotate(2deg); } /* Bottom center */
+/* --- INDIVIDUAL PLACEMENTS (Adjust these to taste!) --- */
 
-/* Responsive adjustment for Mobile */
+/* TOP HALF */
+.pic1 { top: 15%; left: 10%; transform: rotate(-10deg); } /* Top-left */
+.pic2 { top: 20%; right: 10%; transform: rotate(12deg); } /* Top-right */
+.pic3 { top: 40%; left: 5%; transform: rotate(5deg); }  /* Middle-left */
+
+/* BOTTOM HALF */
+.pic4 { bottom: 20%; right: 5%; transform: rotate(-8deg); } /* Bottom-right */
+.pic5 { bottom: 15%; left: 8%; transform: rotate(-15deg); } /* Bottom-left */
+
+/* Near the central GIF (Middle) */
+.pic6 { top: 50%; right: 15%; transform: rotate(15deg); } /* Middle-right, slightly lower */
+.pic7 { bottom: 10%; left: 45%; transform: rotate(2deg); } /* Bottom-middle, pulling it slightly away from the center */
+
+/* Responsive adjustment for Mobile (optional) */
 @media (max-width: 768px) {
     .gal-pic {
-        width: 80px; /* Even smaller for phones */
-    }
-    .scattered-gallery {
-        height: 500px; /* Adjust height so they don't overlap too much vertically */
+        width: 90px;
     }
 }
