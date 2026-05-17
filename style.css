@@ -255,11 +255,17 @@ h1 {
 
 /* THE RING (Centered right below the message) */
 .pic7 { 
-    bottom: 30%; 
-    left: 35%; 
+    bottom: 33%; 
+    left: 32%; 
     transform: translateX(-50%) rotate(4deg); 
     width: 140px !important; 
     z-index: 2; 
+}
+
+/* Specific hover logic for the ring to keep it centered while scaling up */
+.pic7:hover {
+    transform: translateX(-50%) scale(1.4) rotate(0deg) !important;
+    z-index: 20; /* Ensures it pops to the front over other elements */
 }
 
 /* Responsive adjustment for Mobile (optional) */
