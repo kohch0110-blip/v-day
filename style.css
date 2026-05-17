@@ -253,6 +253,18 @@ h1 {
 .pic6 { top: 45%; right: 5%; transform: rotate(15deg); }   /* Middle Right */
 .pic4 { bottom: 1%; right: 18%; transform: rotate(-8deg); } /* Bottom Right */
 
+/* THE RING (Centered right below the message) */
+.pic7 { 
+    bottom: 8%; 
+    left: 50%; 
+    transform: translateX(-50%) rotate(4deg); 
+    width: 140px !important; 
+    z-index: 2; 
+}
+.pic7:hover {
+    transform: translateX(-50%) scale(1.4) rotate(0deg) !important;
+} 
+
 /* Responsive adjustment for Mobile (optional) */
 @media (max-width: 768px) {
     .gal-pic {
