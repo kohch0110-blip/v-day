@@ -255,8 +255,8 @@ h1 {
 
 /* THE RING (Centered right below the message) */
 .pic7 { 
-    bottom: 12%; 
-    left: 45%; 
+    bottom: 30%; 
+    left: 400%; 
     transform: translateX(-50%) rotate(4deg); 
     width: 140px !important; 
     z-index: 2; 
